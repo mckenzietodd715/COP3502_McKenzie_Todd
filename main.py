@@ -54,6 +54,7 @@ if __name__ == '__main__':
         elif user_opt == '2':
             # gives user the decoded string
             decoded_num = decode(encoded_pass)
+            # print encoded and decoded numbers
             print(f"The encoded password is {encoded_pass}, and the original password is {decoded_num}.\n")
 
         elif user_opt == '3':
