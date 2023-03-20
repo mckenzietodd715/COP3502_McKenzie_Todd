@@ -19,8 +19,18 @@ def encode(data_string):
         res += value
     return res
 
+
+# function by Chloe Lai
 def decode(data_string):
-    pass
+    decoded_num = ""
+    for num in data_string:
+        # takes apart each individual number in the string
+        if int(num) >= 3:  # if number is greater or equal to 3, directly subtract 3 to get decoded number
+            new_num = int(num) - 3
+        else:  # otherwise add 10 to the encoded number before subtracting it by 3
+            new_num = (int(num) + 10) - 3
+        decoded_num += str(new_num)  # add the new sequence of numbers together each time to get decoded string
+    return decoded_num
 
 if __name__ == '__main__':
     # loop to continue function until user quits
@@ -42,7 +52,9 @@ if __name__ == '__main__':
             print()
 
         elif user_opt == '2':
-            pass
+            # gives user the decoded string
+            decoded_num = decode(encoded_pass)
+            print(f"The encoded password is {encoded_pass}, and the original password is {decoded_num}.\n")
 
         elif user_opt == '3':
             break
