@@ -32,3 +32,17 @@ if __name__ == '__main__':
 
         # user input for menu option
         user_opt = input("Please enter an option: ")
+
+        # different functions run depending on the user_opt
+        if user_opt == '1':
+            # runs encoding function
+            user_pass = input("Please enter a password to encode: ")
+            encoded_pass = encode(user_pass)
+            print("Your password has been encoded and stored!")
+            print()
+
+        elif user_opt == '2':
+            pass
+
+        elif user_opt == '3':
+            break
