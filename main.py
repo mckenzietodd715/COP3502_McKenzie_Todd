@@ -7,12 +7,12 @@ def encode(data_string):
         old_value = int(num)
         if old_value <= 6:
             new_value = old_value + 3
-        if old_value == 7:
+        elif old_value == 7:
             new_value = 0
-        if old_value == 8:
+        elif old_value == 8:
             new_value = 1
-        if old_value == 9:
-            new_value = 3
+        elif old_value == 9:
+            new_value = 2
         # returns the value to a string
         value = str(new_value)
         # combines the numbers into a string
